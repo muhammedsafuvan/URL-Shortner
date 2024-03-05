@@ -1,6 +1,6 @@
-from backend.shorturls.url_shortener.data.abstract_repo import ShortUrlAbstractRepository
-from backend.shorturls.url_shortener.domain.domain_model import UrlDomainModel, UrlGetRequest, UrlPostRequest
-from backend.shorturls.url_shortener.models import Url
+from url_shortener.data.abstract_repo import ShortUrlAbstractRepository
+from url_shortener.domain.domain_model import UrlDomainModel, UrlGetRequest, UrlPostRequest
+from url_shortener.models import Url
 from datetime import datetime
 
 import hashlib

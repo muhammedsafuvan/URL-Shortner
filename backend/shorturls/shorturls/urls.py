@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from url_shortener.presentation.views import ShortUrlCreateView, ShortUrlGetView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('tinyurl/<str:long_url>/', ShortUrlCreateView.as_view(), name='shorten-url'),
+    path('tinyurl/<str:short_url>/', ShortUrlGetView.as_view(), name='redirect-url'),
+
 ]
