@@ -1,7 +1,7 @@
 
 import abc
 
-from backend.shorturls.url_shortener.domain.domain_model import UrlDomainModel, UrlGetRequest
+from url_shortener.domain.domain_model import UrlDomainModel, UrlGetRequest
 
 
 class ShortUrlAbstractRepository(abc.ABC):
@@ -14,6 +14,6 @@ class ShortUrlAbstractRepository(abc.ABC):
 
 
     @abc.abstractmethod
-    def create(self, url_dm: UrlDomainModel) -> UrlDomainModel:
+    def create(self, request: UrlDomainModel) -> UrlDomainModel:
         """Create a short URL from the request object."""
         pass
